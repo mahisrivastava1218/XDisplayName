@@ -25,9 +25,9 @@ export default function Display(){
             </div>
             <div>
                 Last Name: {" "}
-                <input value={lastName} placeholder="enter your LastName" className={styles["placeholder"]} onChange={(e)=>setLastName(e.target.value)} required/>
+                <input type="text" value={lastName} placeholder="enter your LastName" className={styles["placeholder"]} onChange={(e)=>setLastName(e.target.value)} required/>
             </div>
-            <div><button style={{padding:"10px"}} onClick={handlerClick}>Submit</button></div>
+            <button type="submit" style={{padding:"10px"}} onClick={handlerClick}>Submit</button>
             {display && (
                  <div style={{color:"black"}}>
                     Full Name: {fullName} {lastName}
