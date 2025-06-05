@@ -15,11 +15,12 @@ export default function Display(){
         
     }
     return(
-        <form onSubmit={handleSubmit} style={{border:"1px solid green",height:"100vh",width:"100vw",display:"flex",flexDirection:"column",alignItems:"center",gap:"20px"}}>
+        <div style={{border:"1px solid green",height:"100vh",width:"100vw",display:"flex",flexDirection:"column",alignItems:"center",gap:"20px"}}>
+        <form onSubmit={handleSubmit} style={{display:"flex",flexDirection:"column",alignItems:"center",gap:"20px"}}>
             <h1>Full Name Display</h1>
             <div>
                 First Name:
-                <input type="text" value={firstName} placeholder="enter your fullName" className={styles["placeholder"]} onChange={(e)=>{
+                <input type="text" value={firstName} placeholder="enter your firstName" className={styles["placeholder"]} onChange={(e)=>{
                     // const onlyLetters= e.target.value.replace(/[^a-zA-z]/g,'');
                     setFirstName(e.target.value)
                     }} required/>
@@ -32,11 +33,12 @@ export default function Display(){
                 }} required/>
             </div>
             <button type="submit" style={{padding:"10px"}}>Submit</button>
+            </form>
             {display && (
                  <div style={{color:"black"}}>
                     Full Name: {firstName} {lastName}
                  </div>
             )}
-        </form>
+        </div>
     )
 }
