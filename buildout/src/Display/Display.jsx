@@ -23,15 +23,15 @@ export default function Display(){
             <div>
                 First Name:
                 <input type="text" value={firstName} placeholder="enter your fullName" className={styles["placeholder"]} onChange={(e)=>{
-                    // const onlyLetters= e.target.value.replace(/[^a-zA-z]/g,'');
-                    setFirstName(e.target.value)
+                    const onlyLetters= e.target.value.replace(/[^a-zA-z]/g,'');
+                    setFirstName(onlyLetters)
                     }} required/>
             </div>
             <div>
                 Last Name:
                 <input type="text" value={lastName} placeholder="enter your LastName" className={styles["placeholder"]} onChange={(e)=>{
-                    //   const onlyLetters= e.target.value.replace(/[^a-zA-z]/g,'');
-                      setLastName(e.target.value)
+                      const onlyLetters= e.target.value.replace(/[^a-zA-z]/g,'');
+                      setLastName(onlyLetters)
                 }} required/>
             </div>
             <button type="submit" style={{padding:"10px"}}>Submit</button>
