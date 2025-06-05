@@ -11,7 +11,7 @@ export default function Display(){
         e.preventDefault();
          if(firstName.trim() && lastName.trim()){
                 setDisplay(true);
-                setTimeout(()=>navigate("/"),1000);
+                navigate("/");
             }else{
                 setDisplay(false);
         }
@@ -34,9 +34,9 @@ export default function Display(){
                       setLastName(onlyLetters)
                 }} required/>
             </div>
-            <button type="submit" style={{padding:"10px"}} data-testid="full-name-display">Submit</button>
+            <button type="submit" style={{padding:"10px"}}>Submit</button>
             {display && (
-                 <div style={{color:"black"}}>
+                 <div style={{color:"black"}}data-testid="full-name-display">
                     Full Name: {firstName} {lastName}
                  </div>
             )}
