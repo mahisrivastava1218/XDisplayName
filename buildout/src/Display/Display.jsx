@@ -11,10 +11,11 @@ export default function Display(){
         e.preventDefault();
          if(firstName.trim() && lastName.trim()){
                 setDisplay(true);
+                setTimeout(()=>navigate("/"),1000);
             }else{
                 setDisplay(false);
         }
-        // navigate("/");
+        
     }
     return(
         <form onSubmit={handleSubmit} style={{border:"1px solid green",height:"100vh",width:"100vw",display:"flex",flexDirection:"column",alignItems:"center",gap:"20px"}}>
